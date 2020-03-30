@@ -7,9 +7,10 @@ Extend kubernetes functionality using java
    ```bash
    rm -rf ~/.kube
    ```
-1. startup k8s cluster using any tools you have:
+1. spin up new cluster using tool you like:
    * enable Kubernetes cluster if you on mac or windows
    * k3s in k3d
+   * minishift
    * minikube
    * kind
    * ...
