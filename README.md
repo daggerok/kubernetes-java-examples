@@ -13,7 +13,7 @@ Extend kubernetes functionality using java
    * minikube
    * kind
    * ...
-1. run examplesP:
+1. show pods:
    ```bash
    ./mvnw ; java -jar ./target/*-all.jar
    ```
