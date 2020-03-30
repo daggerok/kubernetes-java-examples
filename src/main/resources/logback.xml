@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <!--<pattern>%boldWhite(%d{yyyy-MM-dd HH:mm:ss.SSS}) %highlight(%-5level) %magenta(%-6.6thread{6}) [ %cyan(%-7.7logger{7}) %highlight(%-5.5M{5}) ] - %gray(%msg%n)</pattern>-->
+      <pattern>%boldWhite(%d{HH:mm:ss.SSS}) %highlight(%-5level) %magenta(%-6.6thread{6}) [ %cyan(%-7.7logger{7}) %highlight(%-5.5M{5}) ] - %gray(%msg%n)</pattern>
+    </encoder>
+  </appender>
+  <logger name="org.jboss.weld.Bootstrap" level="warn"/>
+  <logger name="org.jboss.weld.Version" level="warn"/>
+  <root level="info">
+    <appender-ref ref="STDOUT"/>
+  </root>
+</configuration>
