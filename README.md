@@ -1,5 +1,5 @@
 # k8s4j
-Extends kubernetes functionality using java
+Extend kubernetes functionality using java
 
 ## build and run
 
