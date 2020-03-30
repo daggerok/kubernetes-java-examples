@@ -38,11 +38,14 @@ public class Main {
   static Consumer<Throwable> onError = e -> log.error("oops-{}: {}", System.nanoTime(), e.getLocalizedMessage());
 
   public static void main(String... args) {
+    log.info("Looking cluster pods...");
+
     ApiClient client = Try.of(Config::defaultClient)
                           .onFailure(onError)
                           // .getOrElseThrow(reThrow);
                           .getOrNull();
     if (Objects.isNull(client)) return;
+
     Configuration.setDefaultApiClient(client);
     CoreV1Api api = new CoreV1Api();
     V1PodList list = Try.of(() -> api.listPodForAllNamespaces(null,
@@ -58,11 +61,13 @@ public class Main {
                         // .getOrElseThrow(reThrow);
                         .getOrNull();
     if (Objects.isNull(list)) return;
+
     list.getItems()
         .stream()
         .map(V1Pod::getMetadata)
         .filter(Objects::nonNull)
         .map(Info::fromV1ObjectMeta)
-        .forEach(info -> log.info("found: {}", info));
+        .forEach(info -> log.info("Found: {}", info));
+    log.info("Done.");
   }
 }
