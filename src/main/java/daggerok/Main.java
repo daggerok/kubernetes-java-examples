@@ -25,12 +25,12 @@ public class Main {
 
   @Value
   static class Info {
-    final String name, namespace, resourceVersion;
+    final String name, resourceVersion, namespace;
 
     static Info fromV1ObjectMeta(V1ObjectMeta metadata) {
       return new Info(metadata.getName(),
-                      metadata.getNamespace(),
-                      metadata.getResourceVersion());
+                      metadata.getResourceVersion(),
+                      metadata.getNamespace());
     }
   }
 
