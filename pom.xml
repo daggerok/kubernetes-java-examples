@@ -18,7 +18,7 @@
     <vavr.version>0.10.2</vavr.version>
     <log4j.version>2.13.1</log4j.version>
     <logback.version>1.2.</logback.version>
-    <k8s-client-java.version>8.0.0</k8s-client-java.version>
+    <k8s-client-java.version>11.0.1</k8s-client-java.version>
     <fmt-maven-plugin.version>2.9</fmt-maven-plugin.version>
     <maven-bundle-plugin.version>4.2.1</maven-bundle-plugin.version>
     <maven-assembly-plugin.version>3.2.0</maven-assembly-plugin.version>
